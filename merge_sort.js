@@ -11,6 +11,9 @@ const merge = (left, right) => {
   let index_left = 0;
   let index_right = 0;
 
+  // if either indices are greater than the sub array length,
+  // nothing left to compare int that sub array.
+  // concat the rest of the elements b/c it should be in order
   while (index_left < left.length && index_right < right.length) {
     if (left[index_left] < right[index_right]) {
       result.push(left[index_left]);
